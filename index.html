@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Drag 'n' Drop Towers of Hanoi</title>
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body id = "bodyId">
+  <h1 id = "display"></h1>
+  <section id = "racks">
+    <section class = "sub">
+      <div class = "stick" ondragover = "dragDiscOver(event)" ondrop = "dropDisc(event)">
+        <div class = "disk" id = "disk1" ondragstart="startDragDisc(event)" ondrag = "dragDisc(event)">
+          <div class ="shine"></div>
+          <div class = "disk-filling disk-filling1 disk-fillingL"></div>
+          <div class = "disk-filling disk-filling1 disk-fillingR"></div>
+        </div>
+        <div class = "disk" id = "disk2"  ondragstart="startDragDisc(event)" ondrag = "dragDisc(event)">
+          <div class ="shine"></div>
+          <div class = "disk-filling disk-filling2 disk-fillingL"></div>
+          <div class = "disk-filling disk-filling2 disk-fillingR"></div>
+        </div>
+        <div class = "disk" id = "disk3"  ondragstart="startDragDisc(event)" ondrag = "dragDisc(event)">
+          <div class ="shine"></div>
+          <div class = "disk-filling disk-filling3 disk-fillingL"></div>
+          <div class = "disk-filling disk-filling3 disk-fillingR"></div>
+        </div>
+        <div class = "disk" id = "disk4"  ondragstart="startDragDisc(event)" ondrag = "dragDisc(event)">
+          <div class ="shine"></div>
+          <div class = "disk-filling disk-filling4 disk-fillingL"></div>
+          <div class = "disk-filling disk-filling4 disk-fillingR"></div>
+        </div>
+      </div>
+      <div class = "tray-container">
+        <div class = "tray-left"></div>
+        <div class = "tray-center"></div>
+        <div class = "tray-right"></div>
+      </div>
+    </section>
+    <section class = "sub">
+      <div class = "stick" ondragover = "dragDiscOver(event)" ondrop = "dropDisc(event)"></div>
+      <div class = "tray-container">
+        <div class = "tray-left"></div>
+        <div class = "tray-center"></div>
+        <div class = "tray-right"></div>
+      </div>
+    </section>
+    <section class = "sub">
+      <div class = "stick" ondragover = "dragDiscOver(event)" ondrop = "dropDisc(event)"></div>
+      <div class = "tray-container">
+        <div class = "tray-left"></div>
+        <div class = "tray-center"></div>
+        <div class = "tray-right"></div>
+      </div>
+    </section>
+  </section>
+  
+  <section id = "reset-container">
+    <div id = "reset"><p id = "reset-text">Reset</p></div>
+    <div id = "rewind"><p id = "rewind-text">Rewind</p></div>
+  </section>
+  <script  src="js/index.js"></script>
+</body>
+</html>

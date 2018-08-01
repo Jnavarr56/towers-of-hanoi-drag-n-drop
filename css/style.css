@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Kirang+Haerang');
+body {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  min-width: 1000px;
+}
+h1, p {
+  font-family: 'Kirang Haerang', cursive;
+  color: white;
+}
+#display {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+}
+#racks {
+  margin: 0 auto;
+  height: 400px;
+  width: 800px;
+  
+  border-color: white;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+  top: 100px;
+}
+.sub {
+  height: 100%;
+  width: 33.33%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stick {
+  height: 65%;
+  width: 3%;
+  
+  background-color: white;
+  
+  border-radius: 25% 25% 0 0;
+  
+  position: relative;
+  top: 5%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  
+  overflow: visible;
+
+  z-index: 5;
+}
+.tray-container {
+  height: 25%;
+  width: 90%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  bottom: 10%;
+}
+.tray-left {
+  height: 5%;
+  width: 10%;
+  
+  transform: rotate(45deg);
+  
+  background-color: white;
+  
+  position: relative;
+  top: 1.5%;
+  left: 2.120%;
+}
+.tray-center {
+  height: 5%;
+  width: 80%;
+  
+  background-color: white;
+  
+  position: relative;
+  top: 10%;
+}
+.tray-right {
+  height: 5%;
+  width: 10%;
+  
+  transform: rotate(-45deg);
+  
+  background-color: white;
+  
+  position: relative;
+  top: 1.5%;
+  right: 2.125%;
+}
+#reset-container {
+  margin: 0 auto;
+  
+  height: 200px;
+  width: 800px;
+  
+  border-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  position: relative;
+  top: 100px;
+}
+#reset {
+  height: 30%;
+  width: 20%;
+  
+  border-style: solid;
+  border-color: white;
+  border-radius: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 150%;
+}
+#rewind {
+  height: 30%;
+  width: 20%;
+  
+  border-style: solid;
+  border-color: white;
+  border-radius: 15px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 150%;
+}
+.disk {
+  cursor: -webkit-grab;
+
+  border-radius: 15px;
+
+  height: 10%;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+.disk:active {
+  cursor: -webkit-grabbing;
+}
+.disk-filling {
+  height: 120%;
+  width: 75%;
+  
+  border-radius: 100%;
+}
+.disk-fillingL {
+  position: relative;
+  left: 5px;
+}
+.disk-fillingR {
+  position: relative;
+  right: 5px;
+}
+#disk1 {
+  width: 800%;
+  background-color: rgba(160, 0, 0, .9);
+}
+#disk2 {
+  width: 1000%;
+  background-color: rgba(160,160,0, .9);
+}
+#disk3 {
+  width: 1200%;
+  background-color: rgb(105, 173, 38, .9);
+}
+#disk4 {
+  width: 1400%;
+  background-color: rgb(3, 75, 183, .9);
+}
+.disk-filling1 {
+  background-color: rgba(255, 0, 0, .9);
+}
+.disk-filling2 {
+  background-color: rgba(255,255,0,.9);
+}
+.disk-filling3 {
+  background-color: rgba(153, 255, 51,.9);
+}
+.disk-filling4 {
+  background-color: rgba(0, 102, 255,.9);
+}
+.fall {
+  animation: fall .5s linear 0s 1;
+}
+@keyframes fall {
+  0% {position: absolute; top: 30%}
+  100% {position: absolute; top: 90%}
+}
+.winStick {
+  animation: winStick .4s linear 0s infinite;
+}
+@keyframes winStick {
+  0% {background-color: black;}
+  12.5% {background-color: red;}
+  25% {background-color: orange;}
+  37.5% {background-color: yellow;}
+  50% {background-color: green;}
+  62.5% {background-color: blue;}
+  75% {background-color: indigo;}
+  87.5% {background-color: violet;}
+  100% {background-color: white;}
+}
+.winButton {
+  animation: winButton .4s linear 0s infinite;
+}
+@keyframes winButton {
+  0% {border-color: black;}
+  12.5% {border-color: red;}
+  25% {border-color: orange;}
+  37.5% {border-color: yellow;}
+  50% {border-color: green;}
+  62.5% {border-color: blue;}
+  75% {border-color: indigo;}
+  87.5% {border-color: violet;}
+  100% {border-color: white;}
+}
+.winText {
+  animation: winText .4s linear 0s infinite;
+}
+@keyframes winText {
+  0% {color: black}
+  12.5% {color: red}
+  25% {color: orange}
+  37.5% {color: yellow}
+  50% {color: green}
+  62.5% {color: blue}
+  75% {color: indigo}
+  87.5% {color: violet}
+  100% {color: white}
+}
+.shine {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  
+  height: 50%;
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, .7);
+
+  transform: rotate(45deg);
+
+  z-index: 10;
+
+  animation: shine 3s linear 1s infinite;
+}
+@keyframes shine {
+  20% {right: 100%}
+  100% {right: 100%}
+}
